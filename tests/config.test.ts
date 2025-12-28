@@ -20,6 +20,7 @@ describe('config', () => {
       delete process.env.GITHUB_APP_ID;
       delete process.env.GITHUB_APP_PRIVATE_KEY;
       delete process.env.GITHUB_APP_INSTALLATION_ID;
+      delete process.env.GITHUB_API_URL;
 
       const config = loadConfig();
 

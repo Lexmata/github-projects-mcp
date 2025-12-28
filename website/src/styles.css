@@ -170,7 +170,7 @@ body {
 
 /* Stars background */
 .stars-bg {
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.3), transparent),

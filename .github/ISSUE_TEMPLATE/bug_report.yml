@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below to help us understand and fix the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: When I try to list projects, the server crashes with an error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Configure server with PAT
+        2. Call list_projects tool with owner 'my-org'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened. Include error messages if applicable.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Package Version
+      description: What version of the package are you using?
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      description: What version of Node.js are you using?
+      placeholder: "20.10.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: auth-method
+    attributes:
+      label: Authentication Method
+      options:
+        - Personal Access Token
+        - GitHub App
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here (logs, screenshots, etc.)

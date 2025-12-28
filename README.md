@@ -132,7 +132,7 @@ npx @lexmata/github-projects-mcp
 ### Prerequisites
 
 - Node.js 18+
-- npm 9+
+- pnpm 9+
 
 ### Setup
 
@@ -142,19 +142,19 @@ git clone https://github.com/Lexmata/github-projects-mcp.git
 cd github-projects-mcp
 
 # Install dependencies
-npm install
+pnpm install
 
 # Run tests
-npm test
+pnpm test
 
 # Run tests with coverage
-npm run test:coverage
+pnpm test:coverage
 
 # Build
-npm run build
+pnpm build
 
 # Run in development mode
-npm run dev
+pnpm dev
 ```
 
 ### Project Structure

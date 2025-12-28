@@ -15,7 +15,7 @@ This guide will help you get started with the GitHub Projects MCP Server.
 The easiest way to use the server is with npx:
 
 ```bash
-npx @anthropic/github-projects-mcp
+npx @lexmata/github-projects-mcp
 ```
 
 ### Global Installation
@@ -23,7 +23,7 @@ npx @anthropic/github-projects-mcp
 Install globally for repeated use:
 
 ```bash
-npm install -g @anthropic/github-projects-mcp
+pnpm add -g @lexmata/github-projects-mcp
 github-projects-mcp
 ```
 
@@ -32,7 +32,7 @@ github-projects-mcp
 Install in a project:
 
 ```bash
-npm install @anthropic/github-projects-mcp
+pnpm add @lexmata/github-projects-mcp
 ```
 
 ## Authentication Setup
@@ -68,7 +68,7 @@ Add the server to your Claude Desktop configuration:
   "mcpServers": {
     "github-projects": {
       "command": "npx",
-      "args": ["@anthropic/github-projects-mcp"],
+      "args": ["@lexmata/github-projects-mcp"],
       "env": {
         "GITHUB_TOKEN": "ghp_your_token_here"
       }

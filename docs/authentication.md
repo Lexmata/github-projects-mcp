@@ -44,7 +44,7 @@ export GITHUB_TOKEN=ghp_your_token_here
 Or pass it directly to the server (less secure):
 
 ```bash
-GITHUB_TOKEN=ghp_your_token_here npx @anthropic/github-projects-mcp
+GITHUB_TOKEN=ghp_your_token_here npx @lexmata/github-projects-mcp
 ```
 
 ## GitHub App Authentication
@@ -101,7 +101,7 @@ For Claude Desktop configuration:
   "mcpServers": {
     "github-projects": {
       "command": "npx",
-      "args": ["@anthropic/github-projects-mcp"],
+      "args": ["@lexmata/github-projects-mcp"],
       "env": {
         "GITHUB_APP_ID": "123456",
         "GITHUB_APP_PRIVATE_KEY": "-----BEGIN RSA PRIVATE KEY-----\n...\n-----END RSA PRIVATE KEY-----",

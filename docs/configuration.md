@@ -57,7 +57,7 @@ Edit `~/Library/Application Support/Claude/claude_desktop_config.json`:
   "mcpServers": {
     "github-projects": {
       "command": "npx",
-      "args": ["@anthropic/github-projects-mcp"],
+      "args": ["@lexmata/github-projects-mcp"],
       "env": {
         "GITHUB_TOKEN": "ghp_your_token_here"
       }
@@ -75,7 +75,7 @@ Edit `%APPDATA%\Claude\claude_desktop_config.json`:
   "mcpServers": {
     "github-projects": {
       "command": "npx",
-      "args": ["@anthropic/github-projects-mcp"],
+      "args": ["@lexmata/github-projects-mcp"],
       "env": {
         "GITHUB_TOKEN": "ghp_your_token_here"
       }
@@ -93,7 +93,7 @@ If you've installed the package locally:
   "mcpServers": {
     "github-projects": {
       "command": "node",
-      "args": ["./node_modules/@anthropic/github-projects-mcp/dist/index.js"],
+      "args": ["./node_modules/@lexmata/github-projects-mcp/dist/index.js"],
       "env": {
         "GITHUB_TOKEN": "ghp_your_token_here"
       }
@@ -109,7 +109,7 @@ If you've installed the package locally:
   "mcpServers": {
     "github-projects": {
       "command": "npx",
-      "args": ["@anthropic/github-projects-mcp"],
+      "args": ["@lexmata/github-projects-mcp"],
       "env": {
         "GITHUB_APP_ID": "123456",
         "GITHUB_APP_PRIVATE_KEY": "-----BEGIN RSA PRIVATE KEY-----\nMIIE...\n-----END RSA PRIVATE KEY-----",
@@ -134,7 +134,7 @@ When both PAT and GitHub App credentials are configured:
 If using the server programmatically:
 
 ```typescript
-import { loadConfig } from '@anthropic/github-projects-mcp';
+import { loadConfig } from '@lexmata/github-projects-mcp';
 
 // Use environment variables
 const config = loadConfig();

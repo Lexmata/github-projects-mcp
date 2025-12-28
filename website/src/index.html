@@ -2,15 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>GitHub Projects MCP Server | Lexmata</title>
+  <title>GitHub Projects MCP Server - AI-Powered Project Management | Lexmata</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A Model Context Protocol server for GitHub Projects V2. Enable AI assistants like Claude to manage your GitHub Projects through natural language.">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="GitHub Projects MCP Server - AI-Powered Project Management | Lexmata">
+  <meta name="description" content="Enable AI assistants like Claude to manage your GitHub Projects V2. Full CRUD operations for projects, items, fields, and views through the Model Context Protocol (MCP).">
+  <meta name="keywords" content="GitHub Projects, MCP, Model Context Protocol, AI, Claude, GitHub API, project management, automation, Anthropic, AI assistant, GitHub integration">
+  <meta name="author" content="Lexmata LLC">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
   <meta name="theme-color" content="#0d1117">
-  <meta property="og:title" content="GitHub Projects MCP Server">
-  <meta property="og:description" content="Enable AI assistants to manage your GitHub Projects V2">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lexmata.github.io/github-projects-mcp/">
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lexmata.github.io/github-projects-mcp/">
+  <meta property="og:title" content="GitHub Projects MCP Server - AI-Powered Project Management">
+  <meta property="og:description" content="Enable AI assistants like Claude to manage your GitHub Projects V2. Full CRUD operations through the Model Context Protocol.">
+  <meta property="og:image" content="https://lexmata.github.io/github-projects-mcp/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="GitHub Projects MCP">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://lexmata.github.io/github-projects-mcp/">
+  <meta name="twitter:title" content="GitHub Projects MCP Server - AI-Powered Project Management">
+  <meta name="twitter:description" content="Enable AI assistants like Claude to manage your GitHub Projects V2. Full CRUD operations through the Model Context Protocol.">
+  <meta name="twitter:image" content="https://lexmata.github.io/github-projects-mcp/og-image.png">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  
+  <!-- Structured Data - Software Application -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "GitHub Projects MCP Server",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Cross-platform",
+    "description": "A Model Context Protocol (MCP) server that enables AI assistants to manage GitHub Projects V2. Provides full CRUD operations for projects, items, fields, and views.",
+    "url": "https://lexmata.github.io/github-projects-mcp/",
+    "downloadUrl": "https://www.npmjs.com/package/@lexmata/github-projects-mcp",
+    "softwareVersion": "1.0.0",
+    "author": {
+      "@type": "Organization",
+      "name": "Lexmata LLC",
+      "url": "https://github.com/Lexmata"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lexmata LLC"
+    },
+    "license": "https://opensource.org/licenses/MIT",
+    "programmingLanguage": "TypeScript",
+    "codeRepository": "https://github.com/Lexmata/github-projects-mcp",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "17 specialized tools for GitHub Projects management",
+      "Full CRUD operations for projects, items, fields, and views",
+      "Personal Access Token authentication",
+      "GitHub App authentication",
+      "User and organization project support",
+      "100% TypeScript with complete type safety",
+      "100% test coverage"
+    ],
+    "keywords": "GitHub Projects, MCP, Model Context Protocol, AI, Claude, automation"
+  }
+  </script>
+  
+  <!-- Structured Data - Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lexmata LLC",
+    "url": "https://github.com/Lexmata",
+    "logo": "https://github.com/Lexmata.png"
+  }
+  </script>
+  
+  <!-- Structured Data - FAQ for AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GitHub Projects MCP Server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitHub Projects MCP Server is a Model Context Protocol (MCP) server that enables AI assistants like Claude to manage GitHub Projects V2. It provides 17 specialized tools for full CRUD operations on projects, items, fields, and views."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I install GitHub Projects MCP Server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can install it using npm or pnpm: 'npx @lexmata/github-projects-mcp'. For Claude Desktop, add the server configuration to your claude_desktop_config.json file with your GitHub token."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What authentication methods are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GitHub Projects MCP Server supports two authentication methods: Personal Access Tokens (PAT) for individual use, and GitHub App authentication for organizations requiring more granular permissions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What operations can I perform with GitHub Projects MCP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can perform full CRUD operations including: listing, creating, updating, and deleting projects; managing project items (draft issues, existing issues/PRs); creating and updating custom fields; and managing project views."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GitHub Projects MCP Server free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, GitHub Projects MCP Server is free and open-source software released under the MIT License. You can use it for both personal and commercial projects."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Structured Data - HowTo for AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Set Up GitHub Projects MCP Server with Claude Desktop",
+    "description": "Step-by-step guide to configure GitHub Projects MCP Server for use with Claude Desktop AI assistant.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Create a GitHub Personal Access Token",
+        "text": "Go to GitHub Settings > Developer settings > Personal access tokens and create a token with 'repo' and 'project' scopes."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Configure Claude Desktop",
+        "text": "Add the MCP server configuration to your claude_desktop_config.json file, including the npx command and your GitHub token as an environment variable."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Start Using with Claude",
+        "text": "Restart Claude Desktop and start managing your GitHub Projects through natural language commands like 'List my GitHub projects' or 'Create a new project'."
+      }
+    ],
+    "totalTime": "PT5M"
+  }
+  </script>
+  
+  <!-- Structured Data - BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lexmata.github.io/github-projects-mcp/"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <app-root></app-root>

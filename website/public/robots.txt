@@ -1,0 +1,31 @@
+# robots.txt for GitHub Projects MCP Server
+# https://lexmata.github.io/github-projects-mcp/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lexmata.github.io/github-projects-mcp/sitemap.xml
+
+# AI Crawlers - Welcome for AEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+

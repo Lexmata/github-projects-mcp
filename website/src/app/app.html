@@ -1,333 +1,330 @@
-<div class="min-h-screen">
+<div class="min-h-screen" itemscope itemtype="https://schema.org/WebPage">
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-canvas-default)]/80 backdrop-blur-md border-b border-[var(--color-border-muted)]">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-canvas-default)]/80 backdrop-blur-md border-b border-[var(--color-border-muted)]" aria-label="Main navigation">
     <div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <svg class="w-8 h-8 text-[var(--color-fg-default)]" viewBox="0 0 16 16" fill="currentColor">
+      <a href="#" class="flex items-center gap-3" aria-label="GitHub Projects MCP - Home">
+        <svg class="w-8 h-8 text-[var(--color-fg-default)]" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
           <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
+      </svg>
         <span class="font-semibold text-[var(--color-fg-default)]">GitHub Projects MCP</span>
       </a>
       <div class="flex items-center gap-2">
         <a href="#features" class="nav-link hidden sm:block">Features</a>
         <a href="#tools" class="nav-link hidden sm:block">Tools</a>
         <a href="#install" class="nav-link hidden sm:block">Install</a>
-        <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" class="btn-secondary ml-2 !py-2 !px-4 text-sm">
+        <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" rel="noopener noreferrer" class="btn-secondary ml-2 !py-2 !px-4 text-sm">
           View on GitHub
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-24 overflow-hidden stars-bg">
-    <!-- Gradient orbs -->
-    <div class="absolute top-20 left-1/4 w-[500px] h-[500px] bg-[var(--color-accent-fg)] rounded-full opacity-10 blur-[120px]"></div>
-    <div class="absolute top-40 right-1/4 w-[400px] h-[400px] bg-[var(--color-done-fg)] rounded-full opacity-10 blur-[120px]"></div>
+  <main>
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-24 overflow-hidden stars-bg" role="banner">
+      <!-- Gradient orbs (decorative) -->
+      <div class="absolute top-20 left-1/4 w-[500px] h-[500px] bg-[var(--color-accent-fg)] rounded-full opacity-10 blur-[120px]" aria-hidden="true"></div>
+      <div class="absolute top-40 right-1/4 w-[400px] h-[400px] bg-[var(--color-done-fg)] rounded-full opacity-10 blur-[120px]" aria-hidden="true"></div>
 
-    <div class="relative max-w-[1280px] mx-auto px-6">
-      <div class="max-w-4xl mx-auto text-center">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border-default)] bg-[var(--color-canvas-subtle)] text-sm text-[var(--color-fg-muted)] mb-8">
-          <svg class="w-4 h-4 text-[var(--color-success-fg)]" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-            <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>
-          </svg>
-          Model Context Protocol Server
-        </div>
-
-        <!-- Headline -->
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-          <span class="gradient-text">Manage GitHub Projects</span>
-          <br>
-          <span class="gradient-text-blue">with AI assistants</span>
-        </h1>
-
-        <!-- Description -->
-        <p class="text-xl text-[var(--color-fg-muted)] max-w-2xl mx-auto mb-10 leading-relaxed">
-          Enable Claude and other AI assistants to create, update, and manage your GitHub Projects V2 through natural language conversations.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a href="#install" class="btn-primary text-base">
-            Get started
-          </a>
-          <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" class="btn-secondary text-base flex items-center gap-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-            </svg>
-            View repository
-          </a>
-        </div>
-
-        <!-- Code Preview -->
-        <div class="glow-box max-w-2xl mx-auto">
-          <div class="gh-card overflow-hidden">
-            <div class="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border-default)] bg-[var(--color-canvas-inset)]">
-              <div class="flex gap-1.5">
-                <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#febc2e]"></span>
-                <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
-              </div>
-              <span class="text-xs text-[var(--color-fg-muted)] ml-2">Terminal</span>
-            </div>
-            <div class="p-4 font-mono text-sm text-left">
-              <div class="flex items-center gap-2 text-[var(--color-fg-muted)]">
-                <span class="text-[var(--color-success-fg)]">$</span>
-                <span class="text-[var(--color-fg-default)]">npx</span>
-                <span class="text-[var(--color-accent-fg)]">&#64;lexmata/github-projects-mcp</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Divider -->
-  <div class="divider"></div>
-
-  <!-- Features Section -->
-  <section id="features" class="py-24 px-6">
-    <div class="max-w-[1280px] mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Everything you need</h2>
-        <p class="text-lg text-[var(--color-fg-muted)] max-w-2xl mx-auto">
-          Full GitHub Projects V2 support with enterprise-grade features
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Feature 1 -->
-        <div class="gh-card p-6">
-          <div class="feature-icon bg-[rgba(47,129,247,0.15)] mb-4">
-            <svg class="w-6 h-6 text-[var(--color-accent-fg)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">17 Specialized Tools</h3>
-          <p class="text-[var(--color-fg-muted)] text-sm leading-relaxed">
-            Complete CRUD operations for projects, items, fields, and views. Every GitHub Projects operation at your fingertips.
-          </p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="gh-card p-6">
-          <div class="feature-icon bg-[rgba(63,185,80,0.15)] mb-4">
-            <svg class="w-6 h-6 text-[var(--color-success-fg)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">Dual Authentication</h3>
-          <p class="text-[var(--color-fg-muted)] text-sm leading-relaxed">
-            Support for Personal Access Tokens and GitHub App authentication. Flexible options for individuals and organizations.
-          </p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="gh-card p-6">
-          <div class="feature-icon bg-[rgba(163,113,247,0.15)] mb-4">
-            <svg class="w-6 h-6 text-[var(--color-done-fg)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">100% Test Coverage</h3>
-          <p class="text-[var(--color-fg-muted)] text-sm leading-relaxed">
-            Built with TypeScript for complete type safety. Thoroughly tested to ensure reliability in production.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tools Section -->
-  <section id="tools" class="py-24 px-6 bg-[var(--color-canvas-subtle)]">
-    <div class="max-w-[1280px] mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Available Tools</h2>
-        <p class="text-lg text-[var(--color-fg-muted)]">
-          Complete control over GitHub Projects V2
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-        <!-- Projects -->
-        <div>
-          <h3 class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75C0 .784.784 0 1.75 0zM1.5 1.75v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"/>
-            </svg>
-            Projects
-          </h3>
-          <ul class="space-y-2">
-            <li><code class="text-sm text-[var(--color-accent-fg)]">list_projects</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">get_project</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">create_project</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">update_project</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">delete_project</code></li>
-          </ul>
-        </div>
-
-        <!-- Items -->
-        <div>
-          <h3 class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+      <div class="relative max-w-[1280px] mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border-default)] bg-[var(--color-canvas-subtle)] text-sm text-[var(--color-fg-muted)] mb-8">
+            <svg class="w-4 h-4 text-[var(--color-success-fg)]" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
               <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
               <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>
             </svg>
-            Items
-          </h3>
-          <ul class="space-y-2">
-            <li><code class="text-sm text-[var(--color-accent-fg)]">list_project_items</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">get_project_item</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">add_draft_issue</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">add_existing_issue</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">update_item_field</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">remove_project_item</code></li>
-          </ul>
-        </div>
-
-        <!-- Fields -->
-        <div>
-          <h3 class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75z"/>
-              <path d="M5 6.25a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 6.25zm0 3a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 9.25z"/>
-            </svg>
-            Fields
-          </h3>
-          <ul class="space-y-2">
-            <li><code class="text-sm text-[var(--color-accent-fg)]">list_project_fields</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">create_field</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">update_field</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">delete_field</code></li>
-          </ul>
-        </div>
-
-        <!-- Views -->
-        <div>
-          <h3 class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.002 3.97a.75.75 0 00-1.004 1.116l3.25 2.914-3.25 2.914a.75.75 0 101.004 1.116l3.75-3.36a.75.75 0 000-1.116l-3.75-3.584zm-3.25 1.116a.75.75 0 10-1.004-1.116l-3.75 3.584a.75.75 0 000 1.116l3.75 3.36a.75.75 0 101.004-1.116L1.498 8l3.254-2.914z"/>
-            </svg>
-            Views
-          </h3>
-          <ul class="space-y-2">
-            <li><code class="text-sm text-[var(--color-accent-fg)]">list_project_views</code></li>
-            <li><code class="text-sm text-[var(--color-accent-fg)]">get_project_view</code></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Installation Section -->
-  <section id="install" class="py-24 px-6">
-    <div class="max-w-[1280px] mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get started in minutes</h2>
-        <p class="text-lg text-[var(--color-fg-muted)]">
-          Quick setup for Claude Desktop
-        </p>
-      </div>
-
-      <div class="max-w-3xl mx-auto space-y-8">
-        <!-- Step 1 -->
-        <div class="flex gap-6">
-          <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-[var(--color-accent-emphasis)] flex items-center justify-center text-white font-semibold">1</div>
+            <span>Model Context Protocol Server</span>
           </div>
-          <div class="flex-1 pt-1">
-            <h3 class="text-lg font-semibold mb-3">Create a GitHub Personal Access Token</h3>
-            <p class="text-[var(--color-fg-muted)] mb-4 text-sm">
-              Go to <a href="https://github.com/settings/tokens" target="_blank" class="text-[var(--color-accent-fg)] hover:underline">GitHub Settings → Developer settings → Personal access tokens</a> and create a token with <code class="text-xs bg-[var(--color-canvas-subtle)] px-1.5 py-0.5 rounded">repo</code> and <code class="text-xs bg-[var(--color-canvas-subtle)] px-1.5 py-0.5 rounded">project</code> scopes.
-            </p>
-          </div>
-        </div>
 
-        <!-- Step 2 -->
-        <div class="flex gap-6">
-          <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-[var(--color-accent-emphasis)] flex items-center justify-center text-white font-semibold">2</div>
+          <!-- Headline -->
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]" itemprop="headline">
+            <span class="gradient-text">Manage GitHub Projects</span>
+            <br>
+            <span class="gradient-text-blue">with AI assistants</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl text-[var(--color-fg-muted)] max-w-2xl mx-auto mb-10 leading-relaxed" itemprop="description">
+            Enable Claude and other AI assistants to create, update, and manage your GitHub Projects V2 through natural language conversations.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <a href="#install" class="btn-primary text-base">
+              Get started
+            </a>
+            <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" rel="noopener noreferrer" class="btn-secondary text-base flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              View repository
+            </a>
           </div>
-          <div class="flex-1 pt-1">
-            <h3 class="text-lg font-semibold mb-3">Add to Claude Desktop configuration</h3>
-            <p class="text-[var(--color-fg-muted)] mb-4 text-sm">
-              Add the following to your <code class="text-xs bg-[var(--color-canvas-subtle)] px-1.5 py-0.5 rounded">claude_desktop_config.json</code>:
-            </p>
+
+          <!-- Code Preview -->
+          <figure class="glow-box max-w-2xl mx-auto">
             <div class="gh-card overflow-hidden">
-              <div class="flex items-center justify-between px-4 py-2 border-b border-[var(--color-border-default)] bg-[var(--color-canvas-inset)]">
-                <span class="text-xs text-[var(--color-fg-muted)]">claude_desktop_config.json</span>
+              <div class="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border-default)] bg-[var(--color-canvas-inset)]" aria-hidden="true">
+                <div class="flex gap-1.5">
+                  <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
+                  <span class="w-3 h-3 rounded-full bg-[#febc2e]"></span>
+                  <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
+                </div>
+                <span class="text-xs text-[var(--color-fg-muted)] ml-2">Terminal</span>
               </div>
-              <pre class="p-4 text-sm overflow-x-auto"><code class="text-[var(--color-fg-default)]">{{ configExample }}</code></pre>
+              <pre class="p-4 font-mono text-sm text-left" aria-label="Installation command"><code>$ npx &#64;lexmata/github-projects-mcp</code></pre>
             </div>
-          </div>
+            <figcaption class="sr-only">Quick installation command for GitHub Projects MCP Server</figcaption>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <!-- Divider -->
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-6" aria-labelledby="features-heading">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-16">
+          <h2 id="features-heading" class="text-3xl sm:text-4xl font-bold mb-4">Everything you need</h2>
+          <p class="text-lg text-[var(--color-fg-muted)] max-w-2xl mx-auto">
+            Full GitHub Projects V2 support with enterprise-grade features
+          </p>
         </div>
 
-        <!-- Step 3 -->
-        <div class="flex gap-6">
-          <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-[var(--color-success-fg)] flex items-center justify-center text-white font-semibold">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        <div class="grid md:grid-cols-3 gap-6" role="list">
+          <!-- Feature 1 -->
+          <article class="gh-card p-6" role="listitem">
+            <div class="feature-icon bg-[rgba(47,129,247,0.15)] mb-4" aria-hidden="true">
+              <svg class="w-6 h-6 text-[var(--color-accent-fg)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
-          </div>
-          <div class="flex-1 pt-1">
-            <h3 class="text-lg font-semibold mb-3">Start using with Claude</h3>
-            <p class="text-[var(--color-fg-muted)] text-sm">
-              Restart Claude Desktop and try asking: <span class="text-[var(--color-fg-default)]">"List my GitHub projects"</span> or <span class="text-[var(--color-fg-default)]">"Create a new project called Sprint Planning"</span>
+            <h3 class="text-lg font-semibold mb-2">17 Specialized Tools</h3>
+            <p class="text-[var(--color-fg-muted)] text-sm leading-relaxed">
+              Complete CRUD operations for projects, items, fields, and views. Every GitHub Projects operation at your fingertips.
             </p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="gh-card p-6" role="listitem">
+            <div class="feature-icon bg-[rgba(63,185,80,0.15)] mb-4" aria-hidden="true">
+              <svg class="w-6 h-6 text-[var(--color-success-fg)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Dual Authentication</h3>
+            <p class="text-[var(--color-fg-muted)] text-sm leading-relaxed">
+              Support for Personal Access Tokens and GitHub App authentication. Flexible options for individuals and organizations.
+            </p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="gh-card p-6" role="listitem">
+            <div class="feature-icon bg-[rgba(163,113,247,0.15)] mb-4" aria-hidden="true">
+              <svg class="w-6 h-6 text-[var(--color-done-fg)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">100% Test Coverage</h3>
+            <p class="text-[var(--color-fg-muted)] text-sm leading-relaxed">
+              Built with TypeScript for complete type safety. Thoroughly tested to ensure reliability in production.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-24 px-6 bg-[var(--color-canvas-subtle)]" aria-labelledby="tools-heading">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-12">
+          <h2 id="tools-heading" class="text-3xl sm:text-4xl font-bold mb-4">Available Tools</h2>
+          <p class="text-lg text-[var(--color-fg-muted)]">
+            Complete control over GitHub Projects V2
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <!-- Projects -->
+          <div role="group" aria-labelledby="projects-tools">
+            <h3 id="projects-tools" class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75C0 .784.784 0 1.75 0zM1.5 1.75v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"/>
+              </svg>
+              Projects
+            </h3>
+            <ul class="space-y-2" role="list">
+              <li><code class="text-sm text-[var(--color-accent-fg)]">list_projects</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">get_project</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">create_project</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">update_project</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">delete_project</code></li>
+            </ul>
+          </div>
+
+          <!-- Items -->
+          <div role="group" aria-labelledby="items-tools">
+            <h3 id="items-tools" class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>
+              </svg>
+              Items
+            </h3>
+            <ul class="space-y-2" role="list">
+              <li><code class="text-sm text-[var(--color-accent-fg)]">list_project_items</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">get_project_item</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">add_draft_issue</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">add_existing_issue</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">update_item_field</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">remove_project_item</code></li>
+            </ul>
+          </div>
+
+          <!-- Fields -->
+          <div role="group" aria-labelledby="fields-tools">
+            <h3 id="fields-tools" class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75z"/>
+                <path d="M5 6.25a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 6.25zm0 3a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 015 9.25z"/>
+              </svg>
+              Fields
+            </h3>
+            <ul class="space-y-2" role="list">
+              <li><code class="text-sm text-[var(--color-accent-fg)]">list_project_fields</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">create_field</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">update_field</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">delete_field</code></li>
+            </ul>
+          </div>
+
+          <!-- Views -->
+          <div role="group" aria-labelledby="views-tools">
+            <h3 id="views-tools" class="text-sm font-semibold text-[var(--color-fg-muted)] uppercase tracking-wide mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8.002 3.97a.75.75 0 00-1.004 1.116l3.25 2.914-3.25 2.914a.75.75 0 101.004 1.116l3.75-3.36a.75.75 0 000-1.116l-3.75-3.584zm-3.25 1.116a.75.75 0 10-1.004-1.116l-3.75 3.584a.75.75 0 000 1.116l3.75 3.36a.75.75 0 101.004-1.116L1.498 8l3.254-2.914z"/>
+              </svg>
+              Views
+            </h3>
+            <ul class="space-y-2" role="list">
+              <li><code class="text-sm text-[var(--color-accent-fg)]">list_project_views</code></li>
+              <li><code class="text-sm text-[var(--color-accent-fg)]">get_project_view</code></li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="py-24 px-6 bg-[var(--color-canvas-subtle)] border-t border-[var(--color-border-muted)]">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to get started?</h2>
-      <p class="text-lg text-[var(--color-fg-muted)] mb-8">
-        Start managing your GitHub Projects with AI today.
-      </p>
-      <div class="inline-flex flex-col sm:flex-row gap-4">
-        <a href="https://www.npmjs.com/package/@lexmata/github-projects-mcp" target="_blank" class="btn-primary">
-          View on npm
-        </a>
-        <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" class="btn-secondary flex items-center justify-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-          </svg>
-          Star on GitHub
-        </a>
+    <!-- Installation Section -->
+    <section id="install" class="py-24 px-6" aria-labelledby="install-heading">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-16">
+          <h2 id="install-heading" class="text-3xl sm:text-4xl font-bold mb-4">Get started in minutes</h2>
+          <p class="text-lg text-[var(--color-fg-muted)]">
+            Quick setup for Claude Desktop
+          </p>
+        </div>
+
+        <ol class="max-w-3xl mx-auto space-y-8" role="list">
+          <!-- Step 1 -->
+          <li class="flex gap-6">
+            <div class="flex-shrink-0" aria-hidden="true">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-accent-emphasis)] flex items-center justify-center text-white font-semibold">1</div>
+            </div>
+            <div class="flex-1 pt-1">
+              <h3 class="text-lg font-semibold mb-3">Create a GitHub Personal Access Token</h3>
+              <p class="text-[var(--color-fg-muted)] mb-4 text-sm">
+                Go to <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer" class="text-[var(--color-accent-fg)] hover:underline">GitHub Settings → Developer settings → Personal access tokens</a> and create a token with <code class="text-xs bg-[var(--color-canvas-subtle)] px-1.5 py-0.5 rounded">repo</code> and <code class="text-xs bg-[var(--color-canvas-subtle)] px-1.5 py-0.5 rounded">project</code> scopes.
+              </p>
+            </div>
+          </li>
+
+          <!-- Step 2 -->
+          <li class="flex gap-6">
+            <div class="flex-shrink-0" aria-hidden="true">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-accent-emphasis)] flex items-center justify-center text-white font-semibold">2</div>
+            </div>
+            <div class="flex-1 pt-1">
+              <h3 class="text-lg font-semibold mb-3">Add to Claude Desktop configuration</h3>
+              <p class="text-[var(--color-fg-muted)] mb-4 text-sm">
+                Add the following to your <code class="text-xs bg-[var(--color-canvas-subtle)] px-1.5 py-0.5 rounded">claude_desktop_config.json</code>:
+              </p>
+              <figure class="gh-card overflow-hidden">
+                <div class="flex items-center justify-between px-4 py-2 border-b border-[var(--color-border-default)] bg-[var(--color-canvas-inset)]">
+                  <span class="text-xs text-[var(--color-fg-muted)]">claude_desktop_config.json</span>
+                </div>
+                <pre class="p-4 text-sm overflow-x-auto"><code class="text-[var(--color-fg-default)]">{{ configExample }}</code></pre>
+              </figure>
+            </div>
+          </li>
+
+          <!-- Step 3 -->
+          <li class="flex gap-6">
+            <div class="flex-shrink-0" aria-hidden="true">
+              <div class="w-10 h-10 rounded-full bg-[var(--color-success-fg)] flex items-center justify-center text-white font-semibold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex-1 pt-1">
+              <h3 class="text-lg font-semibold mb-3">Start using with Claude</h3>
+              <p class="text-[var(--color-fg-muted)] text-sm">
+                Restart Claude Desktop and try asking: <span class="text-[var(--color-fg-default)]">"List my GitHub projects"</span> or <span class="text-[var(--color-fg-default)]">"Create a new project called Sprint Planning"</span>
+              </p>
+            </div>
+          </li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6 bg-[var(--color-canvas-subtle)] border-t border-[var(--color-border-muted)]" aria-labelledby="cta-heading">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 id="cta-heading" class="text-3xl sm:text-4xl font-bold mb-4">Ready to get started?</h2>
+        <p class="text-lg text-[var(--color-fg-muted)] mb-8">
+          Start managing your GitHub Projects with AI today.
+        </p>
+        <div class="inline-flex flex-col sm:flex-row gap-4">
+          <a href="https://www.npmjs.com/package/@lexmata/github-projects-mcp" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            View on npm
+          </a>
+          <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" rel="noopener noreferrer" class="btn-secondary flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            Star on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="py-12 px-6 border-t border-[var(--color-border-muted)]">
+  <footer class="py-12 px-6 border-t border-[var(--color-border-muted)]" role="contentinfo">
     <div class="max-w-[1280px] mx-auto">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-3">
-          <svg class="w-6 h-6 text-[var(--color-fg-muted)]" viewBox="0 0 16 16" fill="currentColor">
+          <svg class="w-6 h-6 text-[var(--color-fg-muted)]" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
           </svg>
-          <span class="text-sm text-[var(--color-fg-muted)]">© {{ currentYear }} Lexmata LLC. Released under MIT License.</span>
+          <span class="text-sm text-[var(--color-fg-muted)]">© {{ currentYear }} <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Lexmata LLC</span></span>. Released under MIT License.</span>
         </div>
-        <div class="flex items-center gap-6 text-sm">
-          <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" class="text-[var(--color-fg-muted)] hover:text-[var(--color-accent-fg)] transition-colors">
+        <nav class="flex items-center gap-6 text-sm" aria-label="Footer navigation">
+          <a href="https://github.com/Lexmata/github-projects-mcp" target="_blank" rel="noopener noreferrer" class="text-[var(--color-fg-muted)] hover:text-[var(--color-accent-fg)] transition-colors">
             Repository
           </a>
-          <a href="https://www.npmjs.com/package/@lexmata/github-projects-mcp" target="_blank" class="text-[var(--color-fg-muted)] hover:text-[var(--color-accent-fg)] transition-colors">
+          <a href="https://www.npmjs.com/package/@lexmata/github-projects-mcp" target="_blank" rel="noopener noreferrer" class="text-[var(--color-fg-muted)] hover:text-[var(--color-accent-fg)] transition-colors">
             npm
           </a>
-          <a href="https://modelcontextprotocol.io" target="_blank" class="text-[var(--color-fg-muted)] hover:text-[var(--color-accent-fg)] transition-colors">
+          <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" class="text-[var(--color-fg-muted)] hover:text-[var(--color-accent-fg)] transition-colors">
             MCP Protocol
           </a>
-        </div>
+        </nav>
       </div>
     </div>
   </footer>
-</div>
+  </div>

@@ -1,19 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Instrument Sans", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   
-  --color-midnight: #0a0a0f;
-  --color-surface: #12121a;
-  --color-surface-alt: #1a1a24;
-  --color-border: #2a2a3a;
-  --color-accent: #6366f1;
-  --color-accent-bright: #818cf8;
-  --color-success: #10b981;
-  --color-cyan: #22d3ee;
-  --color-text: #e2e8f0;
-  --color-text-muted: #94a3b8;
+  /* GitHub Dark Theme Colors */
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-canvas-inset: #010409;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-fg-default: #e6edf3;
+  --color-fg-muted: #7d8590;
+  --color-fg-subtle: #6e7681;
+  --color-accent-fg: #2f81f7;
+  --color-accent-emphasis: #1f6feb;
+  --color-success-fg: #3fb950;
+  --color-attention-fg: #d29922;
+  --color-danger-fg: #f85149;
+  --color-done-fg: #a371f7;
 }
 
 html {
@@ -22,59 +27,154 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--color-midnight);
-  color: var(--color-text);
+  background: var(--color-canvas-default);
+  color: var(--color-fg-default);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--color-accent);
+  background: var(--color-accent-emphasis);
   color: white;
 }
 
+/* GitHub-style gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-accent-bright), var(--color-cyan));
+  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glow {
-  box-shadow: 0 0 60px -15px var(--color-accent);
+.gradient-text-blue {
+  background: linear-gradient(90deg, #79c0ff 0%, #d2a8ff 50%, #ff7b72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.code-block {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+/* GitHub-style button */
+.btn-primary {
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%), var(--color-accent-emphasis);
+  border: 1px solid rgba(240,246,252,0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 20px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%), #388bfd;
+}
+
+.btn-secondary {
+  background: var(--color-canvas-subtle);
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
+  color: var(--color-fg-default);
+  font-weight: 500;
+  padding: 12px 20px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--color-border-muted);
+  border-color: var(--color-border-default);
+}
+
+/* GitHub-style card */
+.gh-card {
+  background: var(--color-canvas-subtle);
+  border: 1px solid var(--color-border-default);
   border-radius: 12px;
+  transition: border-color 0.2s;
+}
+
+.gh-card:hover {
+  border-color: var(--color-border-default);
+}
+
+/* Code block styling */
+.code-block {
+  background: var(--color-canvas-inset);
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
-  overflow-x: auto;
+  font-size: 14px;
 }
 
-.feature-card {
-  background: linear-gradient(145deg, var(--color-surface) 0%, var(--color-surface-alt) 100%);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  transition: all 0.3s ease;
+/* Glow effect */
+.glow-box {
+  position: relative;
 }
 
-.feature-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -20px rgba(99, 102, 241, 0.3);
+.glow-box::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, var(--color-accent-fg), var(--color-done-fg), var(--color-danger-fg));
+  border-radius: 13px;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(20px);
 }
 
-.tool-badge {
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  transition: all 0.2s ease;
+/* Navigation */
+.nav-link {
+  color: var(--color-fg-default);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
 
-.tool-badge:hover {
-  border-color: var(--color-accent);
-  background: var(--color-surface);
+.nav-link:hover {
+  background: var(--color-canvas-subtle);
+}
+
+/* Feature icon */
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated border */
+@keyframes border-rotate {
+  from { --angle: 0deg; }
+  to { --angle: 360deg; }
+}
+
+/* Tool tags */
+.tool-tag {
+  background: rgba(47, 129, 247, 0.15);
+  border: 1px solid rgba(47, 129, 247, 0.4);
+  border-radius: 20px;
+  color: var(--color-accent-fg);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-default), transparent);
+}
+
+/* Stars background */
+.stars-bg {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.4), transparent);
+  background-size: 200px 200px;
 }

@@ -1,0 +1,38 @@
+# Source files (dist is published)
+src/
+
+# Tests
+tests/
+coverage/
+vitest.config.ts
+
+# Documentation (README is included via package.json files)
+docs/
+
+# Development configs
+.eslintrc.json
+.prettierrc
+.swcrc
+tsconfig.json
+
+# GitHub
+.github/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env
+.env
+.env.*
+

@@ -1,0 +1,4 @@
+# Run type checking and tests before pushing
+pnpm typecheck
+pnpm test
+

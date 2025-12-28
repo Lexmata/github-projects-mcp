@@ -1,9 +1,5 @@
 import type { GitHubGraphQLClient } from '../graphql/client.js';
-import {
-  CREATE_PROJECT,
-  DELETE_PROJECT,
-  UPDATE_PROJECT,
-} from '../graphql/mutations.js';
+import { CREATE_PROJECT, DELETE_PROJECT, UPDATE_PROJECT } from '../graphql/mutations.js';
 import {
   GET_ORG_ID,
   GET_ORG_PROJECT,

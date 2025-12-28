@@ -82,9 +82,9 @@ describe('items tools', () => {
     it('should throw error when project not found', async () => {
       vi.mocked(mockClient.request).mockResolvedValue({ node: null });
 
-      await expect(
-        listProjectItems(mockClient, { projectId: 'invalid-proj' })
-      ).rejects.toThrow(GitHubProjectsError);
+      await expect(listProjectItems(mockClient, { projectId: 'invalid-proj' })).rejects.toThrow(
+        GitHubProjectsError
+      );
     });
   });
 

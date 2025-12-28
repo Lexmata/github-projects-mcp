@@ -1,4 +1,4 @@
-import { vi } from 'vitest';
+import { afterAll, beforeEach, vi } from 'vitest';
 
 // Mock environment variables
 vi.stubEnv('GITHUB_TOKEN', 'test-token');

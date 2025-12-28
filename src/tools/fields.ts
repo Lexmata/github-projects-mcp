@@ -14,7 +14,6 @@ import type {
 import type {
   CreateProjectV2FieldPayload,
   DeleteProjectV2FieldPayload,
-  ProjectV2FieldConfiguration,
   ProjectV2FieldConnection,
   UpdateProjectV2FieldPayload,
 } from '../types/github.js';
@@ -57,7 +56,7 @@ export async function listProjectFields(
   const { nodes, pageInfo, totalCount } = response.node.fields;
 
   return {
-    fields: nodes as ProjectV2FieldConfiguration[],
+    fields: nodes,
     totalCount,
     hasNextPage: pageInfo.hasNextPage,
     endCursor: pageInfo.endCursor,

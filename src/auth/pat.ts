@@ -11,7 +11,7 @@ export class PatAuthProvider implements AuthProvider {
     this.token = config.token;
   }
 
-  async getToken(): Promise<string> {
-    return this.token;
+  getToken(): Promise<string> {
+    return Promise.resolve(this.token);
   }
 }

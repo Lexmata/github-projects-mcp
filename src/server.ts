@@ -1,9 +1,6 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import {
-  CallToolRequestSchema,
-  ListToolsRequestSchema,
-} from '@modelcontextprotocol/sdk/types.js';
+import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 import { z } from 'zod';
 
 import { createAuthProvider } from './auth/index.js';
@@ -33,20 +30,26 @@ import { GitHubProjectsError } from './types/mcp.js';
 // Input validation schemas
 const ListProjectsSchema = z.object({
   owner: z.string().describe('The username or organization name'),
-  ownerType: z.enum(['user', 'organization']).describe('Whether the owner is a user or organization'),
+  ownerType: z
+    .enum(['user', 'organization'])
+    .describe('Whether the owner is a user or organization'),
   first: z.number().optional().describe('Number of projects to return (default: 20, max: 100)'),
   after: z.string().optional().describe('Cursor for pagination'),
 });
 
 const GetProjectSchema = z.object({
   owner: z.string().describe('The username or organization name'),
-  ownerType: z.enum(['user', 'organization']).describe('Whether the owner is a user or organization'),
+  ownerType: z
+    .enum(['user', 'organization'])
+    .describe('Whether the owner is a user or organization'),
   projectNumber: z.number().describe('The project number'),
 });
 
 const CreateProjectSchema = z.object({
   owner: z.string().describe('The username or organization name'),
-  ownerType: z.enum(['user', 'organization']).describe('Whether the owner is a user or organization'),
+  ownerType: z
+    .enum(['user', 'organization'])
+    .describe('Whether the owner is a user or organization'),
   title: z.string().describe('The title of the project'),
 });
 
@@ -90,13 +93,15 @@ const UpdateItemFieldSchema = z.object({
   projectId: z.string().describe('The global ID of the project'),
   itemId: z.string().describe('The global ID of the item'),
   fieldId: z.string().describe('The global ID of the field'),
-  value: z.object({
-    text: z.string().optional().describe('Text value for TEXT fields'),
-    number: z.number().optional().describe('Number value for NUMBER fields'),
-    date: z.string().optional().describe('Date value (YYYY-MM-DD) for DATE fields'),
-    singleSelectOptionId: z.string().optional().describe('Option ID for SINGLE_SELECT fields'),
-    iterationId: z.string().optional().describe('Iteration ID for ITERATION fields'),
-  }).describe('The value to set'),
+  value: z
+    .object({
+      text: z.string().optional().describe('Text value for TEXT fields'),
+      number: z.number().optional().describe('Number value for NUMBER fields'),
+      date: z.string().optional().describe('Date value (YYYY-MM-DD) for DATE fields'),
+      singleSelectOptionId: z.string().optional().describe('Option ID for SINGLE_SELECT fields'),
+      iterationId: z.string().optional().describe('Iteration ID for ITERATION fields'),
+    })
+    .describe('The value to set'),
 });
 
 const RemoveProjectItemSchema = z.object({
@@ -113,12 +118,19 @@ const ListProjectFieldsSchema = z.object({
 const CreateFieldSchema = z.object({
   projectId: z.string().describe('The global ID of the project'),
   name: z.string().describe('Name of the field'),
-  dataType: z.enum(['TEXT', 'NUMBER', 'DATE', 'SINGLE_SELECT', 'ITERATION']).describe('Type of field'),
-  singleSelectOptions: z.array(z.object({
-    name: z.string(),
-    color: z.string(),
-    description: z.string().optional(),
-  })).optional().describe('Options for SINGLE_SELECT fields'),
+  dataType: z
+    .enum(['TEXT', 'NUMBER', 'DATE', 'SINGLE_SELECT', 'ITERATION'])
+    .describe('Type of field'),
+  singleSelectOptions: z
+    .array(
+      z.object({
+        name: z.string(),
+        color: z.string(),
+        description: z.string().optional(),
+      })
+    )
+    .optional()
+    .describe('Options for SINGLE_SELECT fields'),
 });
 
 const UpdateFieldSchema = z.object({
@@ -149,8 +161,15 @@ const TOOLS = [
       type: 'object' as const,
       properties: {
         owner: { type: 'string', description: 'The username or organization name' },
-        ownerType: { type: 'string', enum: ['user', 'organization'], description: 'Whether the owner is a user or organization' },
-        first: { type: 'number', description: 'Number of projects to return (default: 20, max: 100)' },
+        ownerType: {
+          type: 'string',
+          enum: ['user', 'organization'],
+          description: 'Whether the owner is a user or organization',
+        },
+        first: {
+          type: 'number',
+          description: 'Number of projects to return (default: 20, max: 100)',
+        },
         after: { type: 'string', description: 'Cursor for pagination' },
       },
       required: ['owner', 'ownerType'],
@@ -163,7 +182,11 @@ const TOOLS = [
       type: 'object' as const,
       properties: {
         owner: { type: 'string', description: 'The username or organization name' },
-        ownerType: { type: 'string', enum: ['user', 'organization'], description: 'Whether the owner is a user or organization' },
+        ownerType: {
+          type: 'string',
+          enum: ['user', 'organization'],
+          description: 'Whether the owner is a user or organization',
+        },
         projectNumber: { type: 'number', description: 'The project number' },
       },
       required: ['owner', 'ownerType', 'projectNumber'],
@@ -176,7 +199,11 @@ const TOOLS = [
       type: 'object' as const,
       properties: {
         owner: { type: 'string', description: 'The username or organization name' },
-        ownerType: { type: 'string', enum: ['user', 'organization'], description: 'Whether the owner is a user or organization' },
+        ownerType: {
+          type: 'string',
+          enum: ['user', 'organization'],
+          description: 'Whether the owner is a user or organization',
+        },
         title: { type: 'string', description: 'The title of the project' },
       },
       required: ['owner', 'ownerType', 'title'],
@@ -184,7 +211,8 @@ const TOOLS = [
   },
   {
     name: 'update_project',
-    description: 'Update a GitHub Project V2 (title, description, readme, visibility, or closed status)',
+    description:
+      'Update a GitHub Project V2 (title, description, readme, visibility, or closed status)',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -243,7 +271,11 @@ const TOOLS = [
         projectId: { type: 'string', description: 'The global ID of the project' },
         title: { type: 'string', description: 'Title of the draft issue' },
         body: { type: 'string', description: 'Body content of the draft issue' },
-        assigneeIds: { type: 'array', items: { type: 'string' }, description: 'Array of user IDs to assign' },
+        assigneeIds: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Array of user IDs to assign',
+        },
       },
       required: ['projectId', 'title'],
     },
@@ -255,7 +287,10 @@ const TOOLS = [
       type: 'object' as const,
       properties: {
         projectId: { type: 'string', description: 'The global ID of the project' },
-        contentId: { type: 'string', description: 'The global ID of the issue or pull request to add' },
+        contentId: {
+          type: 'string',
+          description: 'The global ID of the issue or pull request to add',
+        },
       },
       required: ['projectId', 'contentId'],
     },
@@ -275,7 +310,10 @@ const TOOLS = [
             text: { type: 'string', description: 'Text value for TEXT fields' },
             number: { type: 'number', description: 'Number value for NUMBER fields' },
             date: { type: 'string', description: 'Date value (YYYY-MM-DD) for DATE fields' },
-            singleSelectOptionId: { type: 'string', description: 'Option ID for SINGLE_SELECT fields' },
+            singleSelectOptionId: {
+              type: 'string',
+              description: 'Option ID for SINGLE_SELECT fields',
+            },
             iterationId: { type: 'string', description: 'Iteration ID for ITERATION fields' },
           },
           description: 'The value to set',
@@ -317,7 +355,11 @@ const TOOLS = [
       properties: {
         projectId: { type: 'string', description: 'The global ID of the project' },
         name: { type: 'string', description: 'Name of the field' },
-        dataType: { type: 'string', enum: ['TEXT', 'NUMBER', 'DATE', 'SINGLE_SELECT', 'ITERATION'], description: 'Type of field' },
+        dataType: {
+          type: 'string',
+          enum: ['TEXT', 'NUMBER', 'DATE', 'SINGLE_SELECT', 'ITERATION'],
+          description: 'Type of field',
+        },
         singleSelectOptions: {
           type: 'array',
           items: {
@@ -401,8 +443,8 @@ export function createServer(config: Config): Server {
     }
   );
 
-  server.setRequestHandler(ListToolsRequestSchema, async () => {
-    return { tools: TOOLS };
+  server.setRequestHandler(ListToolsRequestSchema, () => {
+    return Promise.resolve({ tools: TOOLS });
   });
 
   server.setRequestHandler(CallToolRequestSchema, async (request) => {
@@ -521,11 +563,15 @@ export function createServer(config: Config): Server {
           content: [
             {
               type: 'text',
-              text: JSON.stringify({
-                error: 'VALIDATION_ERROR',
-                message: 'Invalid input parameters',
-                details: error.errors,
-              }, null, 2),
+              text: JSON.stringify(
+                {
+                  error: 'VALIDATION_ERROR',
+                  message: 'Invalid input parameters',
+                  details: error.errors,
+                },
+                null,
+                2
+              ),
             },
           ],
           isError: true,
@@ -537,11 +583,15 @@ export function createServer(config: Config): Server {
           content: [
             {
               type: 'text',
-              text: JSON.stringify({
-                error: error.code,
-                message: error.message,
-                details: error.details,
-              }, null, 2),
+              text: JSON.stringify(
+                {
+                  error: error.code,
+                  message: error.message,
+                  details: error.details,
+                },
+                null,
+                2
+              ),
             },
           ],
           isError: true,
@@ -553,10 +603,14 @@ export function createServer(config: Config): Server {
         content: [
           {
             type: 'text',
-            text: JSON.stringify({
-              error: 'INTERNAL_ERROR',
-              message,
-            }, null, 2),
+            text: JSON.stringify(
+              {
+                error: 'INTERNAL_ERROR',
+                message,
+              },
+              null,
+              2
+            ),
           },
         ],
         isError: true,

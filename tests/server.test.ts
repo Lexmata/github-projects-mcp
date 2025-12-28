@@ -1,5 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 
+import type { PatAuthProvider } from '../src/auth/pat.js';
 import type { Config } from '../src/config.js';
 import { createServer } from '../src/server.js';
 
@@ -50,7 +51,7 @@ describe('MCP Server', () => {
       const { GitHubGraphQLClient } = await import('../src/graphql/client.js');
       const { createAuthProvider } = await import('../src/auth/index.js');
 
-      const mockAuthProvider = { getToken: vi.fn() };
+      const mockAuthProvider = { getToken: vi.fn() } as unknown as PatAuthProvider;
       vi.mocked(createAuthProvider).mockReturnValue(mockAuthProvider);
 
       createServer(config);

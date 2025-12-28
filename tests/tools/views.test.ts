@@ -20,7 +20,13 @@ describe('views tools', () => {
           views: {
             nodes: [
               { id: 'view-1', name: 'Board', number: 1, layout: 'BOARD_LAYOUT', filter: null },
-              { id: 'view-2', name: 'Table', number: 2, layout: 'TABLE_LAYOUT', filter: 'status:open' },
+              {
+                id: 'view-2',
+                name: 'Table',
+                number: 2,
+                layout: 'TABLE_LAYOUT',
+                filter: 'status:open',
+              },
             ],
             pageInfo: {
               hasNextPage: false,
@@ -75,9 +81,9 @@ describe('views tools', () => {
     it('should throw error when project not found', async () => {
       vi.mocked(mockClient.request).mockResolvedValue({ node: null });
 
-      await expect(
-        listProjectViews(mockClient, { projectId: 'invalid-proj' })
-      ).rejects.toThrow(GitHubProjectsError);
+      await expect(listProjectViews(mockClient, { projectId: 'invalid-proj' })).rejects.toThrow(
+        GitHubProjectsError
+      );
     });
   });
 

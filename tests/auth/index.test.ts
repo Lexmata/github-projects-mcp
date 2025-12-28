@@ -1,6 +1,10 @@
 import { describe, expect, it, vi } from 'vitest';
 
-import { createAuthProvider, GitHubAppAuthProvider, PatAuthProvider } from '../../src/auth/index.js';
+import {
+  createAuthProvider,
+  GitHubAppAuthProvider,
+  PatAuthProvider,
+} from '../../src/auth/index.js';
 
 vi.mock('@octokit/auth-app', () => ({
   createAppAuth: vi.fn(() => {

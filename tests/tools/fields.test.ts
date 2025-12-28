@@ -25,7 +25,12 @@ describe('fields tools', () => {
           fields: {
             nodes: [
               { __typename: 'ProjectV2Field', id: 'field-1', name: 'Title', dataType: 'TITLE' },
-              { __typename: 'ProjectV2Field', id: 'field-2', name: 'Status', dataType: 'SINGLE_SELECT' },
+              {
+                __typename: 'ProjectV2Field',
+                id: 'field-2',
+                name: 'Status',
+                dataType: 'SINGLE_SELECT',
+              },
             ],
             pageInfo: {
               hasNextPage: false,
@@ -79,9 +84,9 @@ describe('fields tools', () => {
     it('should throw error when project not found', async () => {
       vi.mocked(mockClient.request).mockResolvedValue({ node: null });
 
-      await expect(
-        listProjectFields(mockClient, { projectId: 'invalid-proj' })
-      ).rejects.toThrow(GitHubProjectsError);
+      await expect(listProjectFields(mockClient, { projectId: 'invalid-proj' })).rejects.toThrow(
+        GitHubProjectsError
+      );
     });
   });
 

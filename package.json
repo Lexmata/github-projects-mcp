@@ -56,7 +56,7 @@
   },
   "homepage": "https://github.com/Lexmata/github-projects-mcp#readme",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=24.0.0"
   },
   "files": [
     "dist",
